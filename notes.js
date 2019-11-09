@@ -6,8 +6,6 @@ const addNote = ( title, body) => {
     // const duplicatedNotes = notes.filter( note => note.title === title) //Continua executando até o final, desnecessário
     const duplicatedNote = notes.find(note => note.title === title) //Executa até encontrar a 1 ocorrencia
 
-    debugger
-
     if(!duplicatedNote){
         notes.push({
             title,
