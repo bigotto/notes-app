@@ -42,7 +42,7 @@ yargs.command({
 //Create list command
 yargs.command({
     command: 'list',
-    describer: 'List all notes',
+    describe: 'List all notes',
     handler() {
         notes.listNotes()
     }
@@ -51,7 +51,7 @@ yargs.command({
 //Create read command
 yargs.command({
     command: 'read',
-    describer: 'Read a note',
+    describe: 'Read a note',
     builder: {
         title: {
             describe: 'Note title',

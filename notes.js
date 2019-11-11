@@ -46,12 +46,16 @@ const loadNotes = () => {
 }
 
 const listNotes = () => {
-    console.log(chalk.yellow('Your notes'))
     const data = loadNotes()
 
-    data.forEach(note => {
-        console.log(note.title)
-    })
+    if(data.length == 0){
+        console.log(chalk.red('No notes found'))
+    } else {
+        console.log(chalk.yellow('Your notes'))
+        data.forEach(note => {
+            console.log(note.title)
+        })
+    }
 }
 
 const readNote = (title) => {
